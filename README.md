@@ -1,11 +1,13 @@
 # 🛡️ Cyber Risk Assessment Platform (CRATIP)
-
+![Last Commit](https://img.shields.io/github/last-commit/ksaikiran950/Cyber_Risk_Assessment-Threat_Intelligence_Platform__using_Python)
 > **Automated Vulnerability Scanning, Threat Intelligence, and Risk Assessment System**
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-green.svg)](https://fastapi.tiangolo.com/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.39.0-red.svg)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![SQLite](https://img.shields.io/badge/database-SQLite-pink)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)<br>
 
 ## 📋 Table of Contents
 
@@ -744,7 +746,7 @@ This project is licensed under the MIT License.
 ---
 
 ## 🙏 Acknowledgments
-
+- Mr. Utkarsh Dixit, Mentor at Infosys
 - Nmap Development Team
 - FastAPI Framework
 - Streamlit Community
@@ -759,8 +761,7 @@ For issues and questions:
 - Contact the development team
 
 ---
-
-**Last Updated:** January 12, 2026  
+## Release
 **Version:** 1.0.0  
 **Status:** Production Ready ✅
 
