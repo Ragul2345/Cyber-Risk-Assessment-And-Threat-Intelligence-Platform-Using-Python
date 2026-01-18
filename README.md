@@ -214,13 +214,13 @@ ______
 
 ### Prerequisites
 - Python 3.10 or higher
-- Nmap installed on system
+- Nmap installed on system. ([Install nmap](./helper_docs/nmap_setup.md))
 - API keys (optional but recommended):
-  - VirusTotal API key
-  - Shodan API key
-  - Vulners API key
-  - NVD API key
-  - OpenRouter API key (for AI features)
+  - [VirusTotal API key](./helper_docs/VirusTotal_API_setup.md)
+  - [Shodan API key](./helper_docs/Shodan_API_setup.md)
+  - [Vulners API key](./helper_docs/Vulners_API_setup.md)
+  - [NVD API key](./helper_docs/NVD_API_key.md)
+  - [OpenRouter API key (for AI features)](./helper_docs/OpenRouter_API_key.md)
 
 ### Step 1: Clone Repository
   ```bash
