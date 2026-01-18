@@ -11,6 +11,7 @@
 
 - [Overview](#-overview)
 - [Features](#-features)
+- [Repository Structure](#repository-structure)
 - [Architecture](#️-architecture)
 - [Installation](#-installation)
 - [Quick Start](#-quick-start)
@@ -39,7 +40,63 @@ The Cyber Risk Assessment Platform (CRATIP) is an enterprise-grade security asse
 ✅ **AI Analyst** - OpenAI-powered threat analysis and remediation recommendations
 
 ---
-
+## Repository Structure
+```
+Directory structure:
+└── ksaikiran950-cyber_risk_assessment-threat_intelligence_platform__using_python/
+    ├── README.md
+    ├── requirements.txt
+    ├── backend/
+    │   ├── alerts.py
+    │   ├── config.py
+    │   ├── database.py
+    │   ├── main.py
+    │   ├── schemas.py
+    │   ├── reports/
+    │   │   ├── csv_report.py
+    │   │   ├── excel_report.py
+    │   │   └── pdf_report.py
+    │   └── services/
+    │       ├── layer1_service.py
+    │       ├── layer2_service.py
+    │       ├── layer3_service.py
+    │       └── orchestrator.py
+    ├── dashboard/
+    │   ├── app.py
+    │   ├── data_loader.py
+    │   ├── _pages/
+    │   │   ├── ai_analyst.py
+    │   │   ├── alerts.py
+    │   │   ├── nmap.py
+    │   │   ├── overview.py
+    │   │   ├── reports.py
+    │   │   ├── risk_analysis.py
+    │   │   ├── threat_intel.py
+    │   │   ├── threat_summary.py
+    │   │   └── vulnerability.py
+    │   └── utils/
+    │       └── pdf_export.py
+    ├── layer1_scanning/
+    │   ├── __init__.py
+    │   ├── profiles.py
+    │   ├── scanner.py
+    │   └── utils.py
+    ├── layer2_threat_intel/
+    │   ├── __init__.py
+    │   ├── enricher.py
+    │   ├── utils.py
+    │   └── clients/
+    │       ├── nvd.py
+    │       ├── shodan.py
+    │       ├── virustotal.py
+    │       └── vulners.py
+    ├── layer3_risk_scoring/
+    │   ├── ai_reasoner.py
+    │   └── scorer.py
+    └── .devcontainer/
+        └── devcontainer.json
+```
+______
 ## 🚀 Features
 
 ### 1. Multi-Layer Security Architecture
