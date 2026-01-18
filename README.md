@@ -183,6 +183,8 @@ The Cyber Risk Assessment Platform (CRATIP) is an enterprise-grade security asse
   ```
 ### Step 4: Install Dependencies
   ```bash
+  pip install --upgrade pip   # (optional: upgrade pip)
+
   pip install -r requirements.txt
   ```
 
