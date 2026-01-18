@@ -210,13 +210,12 @@ Create a `.env` file in the project root:
 
 ---
 
-## 🎬 Quick Start (make sure that your virtual enviromnet is activated)
+## 🎬 Quick Start (make sure that your virtual environment is activated)
 
 ### Option 1: Using Separate Terminals
 
 **Terminal 1 - Backend:**
 ```bash
-cd backend
 uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
