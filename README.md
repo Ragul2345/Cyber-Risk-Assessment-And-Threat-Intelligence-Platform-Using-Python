@@ -178,8 +178,8 @@ The Cyber Risk Assessment Platform (CRATIP) is an enterprise-grade security asse
 ### Step 3: Activate Virtual Environment
   ```bash
   .venv\Scripts\activate # windows
-  
-  source .venv/bin/activate # linux / max
+
+  source .venv/bin/activate # linux / Mac
   ```
 ### Step 4: Install Dependencies
   ```bash
