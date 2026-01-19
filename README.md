@@ -1,26 +1,30 @@
 # 🛡️ Cyber Risk Assessment Platform (CRATIP)
-
+![Last Commit](https://img.shields.io/github/last-commit/ksaikiran950/Cyber_Risk_Assessment-Threat_Intelligence_Platform__using_Python)
 > **Automated Vulnerability Scanning, Threat Intelligence, and Risk Assessment System**
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-green.svg)](https://fastapi.tiangolo.com/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.39.0-red.svg)](https://streamlit.io/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![SQLite](https://img.shields.io/badge/database-SQLite-pink)
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen)<br>
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Architecture](#architecture)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [System Components](#system-components)
-- [Alert System](#alert-system)
-- [Data Flow](#data-flow)
-- [API Documentation](#api-documentation)
-- [Dashboard](#dashboard)
+- [Overview](#-overview)
+- [Features](#-features)
+- [Repository Structure](#repository-structure)
+- [Architecture](#️-architecture)
+- [Technology Stack](#technology-stack)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+- [System Components](#-system-components)
+- [Alert System](#-alert-system)
+- [Data Flow](#-data-flow)
+- [API Documentation](#-api-documentation)
+- [Dashboard](#-dashboard)
 - [Configuration](#configuration)
-- [Project Requirements Compliance](#project-requirements-compliance)
+- [Project Requirements Compliance](#-project-requirements-compliance)
 
 ---
 
@@ -39,7 +43,63 @@ The Cyber Risk Assessment Platform (CRATIP) is an enterprise-grade security asse
 ✅ **AI Analyst** - OpenAI-powered threat analysis and remediation recommendations
 
 ---
-
+## Repository Structure
+```
+Directory structure:
+└── ksaikiran950-cyber_risk_assessment-threat_intelligence_platform__using_python/
+    ├── README.md
+    ├── requirements.txt
+    ├── backend/
+    │   ├── alerts.py
+    │   ├── config.py
+    │   ├── database.py
+    │   ├── main.py
+    │   ├── schemas.py
+    │   ├── reports/
+    │   │   ├── csv_report.py
+    │   │   ├── excel_report.py
+    │   │   └── pdf_report.py
+    │   └── services/
+    │       ├── layer1_service.py
+    │       ├── layer2_service.py
+    │       ├── layer3_service.py
+    │       └── orchestrator.py
+    ├── dashboard/
+    │   ├── app.py
+    │   ├── data_loader.py
+    │   ├── _pages/
+    │   │   ├── ai_analyst.py
+    │   │   ├── alerts.py
+    │   │   ├── nmap.py
+    │   │   ├── overview.py
+    │   │   ├── reports.py
+    │   │   ├── risk_analysis.py
+    │   │   ├── threat_intel.py
+    │   │   ├── threat_summary.py
+    │   │   └── vulnerability.py
+    │   └── utils/
+    │       └── pdf_export.py
+    ├── layer1_scanning/
+    │   ├── __init__.py
+    │   ├── profiles.py
+    │   ├── scanner.py
+    │   └── utils.py
+    ├── layer2_threat_intel/
+    │   ├── __init__.py
+    │   ├── enricher.py
+    │   ├── utils.py
+    │   └── clients/
+    │       ├── nvd.py
+    │       ├── shodan.py
+    │       ├── virustotal.py
+    │       └── vulners.py
+    ├── layer3_risk_scoring/
+    │   ├── ai_reasoner.py
+    │   └── scorer.py
+    └── .devcontainer/
+        └── devcontainer.json
+```
+______
 ## 🚀 Features
 
 ### 1. Multi-Layer Security Architecture
@@ -129,7 +189,7 @@ The Cyber Risk Assessment Platform (CRATIP) is an enterprise-grade security asse
                             └───────────┘
 ```
 
-### Technology Stack
+## Technology Stack
 
 **Backend:**
 - FastAPI 0.115.0 - High-performance async API framework
@@ -156,71 +216,67 @@ The Cyber Risk Assessment Platform (CRATIP) is an enterprise-grade security asse
 ## 📦 Installation
 
 ### Prerequisites
-
 - Python 3.10 or higher
-- Nmap installed on system
+- Nmap installed on system. ([Install nmap](./helper_docs/nmap_setup.md))
 - API keys (optional but recommended):
-  - VirusTotal API key
-  - Shodan API key
-  - Vulners API key
-  - NVD API key
-  - OpenRouter API key (for AI features)
+  - [VirusTotal API key](./helper_docs/VirusTotal_API_setup.md)
+  - [Shodan API key](./helper_docs/Shodan_API_setup.md)
+  - [Vulners API key](./helper_docs/Vulners_API_setup.md)
+  - [NVD API key](./helper_docs/NVD_API_key.md)
+  - [OpenRouter API key (for AI features)](./helper_docs/OpenRouter_API_key.md)
 
 ### Step 1: Clone Repository
-
-```bash
-git clone <repository-url>
-cd Cyber_Risk_Assessment_Platform
-```
+  ```bash
+  git clone ksaikiran950/Cyber_Risk_Assessment_Platform.git
+  cd Cyber_Risk_Assessment_Platform
+  ```
 
 ### Step 2: Create Virtual Environment
+  ```bash
+  python -m venv .venv
+  ```
+### Step 3: Activate Virtual Environment
+  ```bash
+  .venv\Scripts\activate # windows
 
-```bash
-# Windows
-python -m venv .venv
-.venv\Scripts\activate
+  source .venv/bin/activate # linux / Mac
+  ```
+### Step 4: Install Dependencies
+  ```bash
+  pip install --upgrade pip   # (optional: upgrade pip)
 
-# Linux/Mac
-python3 -m venv .venv
-source .venv/bin/activate
-```
+  pip install -r requirements.txt
+  ```
 
-### Step 3: Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Step 4: Configure Environment
+### Step 5: Configure Environment
 
 Create a `.env` file in the project root:
 
-```env
-# API Keys (Optional)
-VIRUSTOTAL_API_KEY=your_virustotal_key
-SHODAN_API_KEY=your_shodan_key
-VULNERS_API_KEY=your_vulners_key
-NVD_API_KEY=your_nvd_key
-OPENROUTER_API_KEY=your_openrouter_key
+  ```env
+  # API Keys (Optional)
+  VIRUSTOTAL_API_KEY=your_virustotal_key
+  SHODAN_API_KEY=your_shodan_key
+  VULNERS_API_KEY=your_vulners_key
+  NVD_API_KEY=your_nvd_key
+  OPENROUTER_API_KEY=your_openrouter_key
 
-# Database
-DATABASE_URL=sqlite:///backend/cratip.db
+  # Database
+  DATABASE_URL=sqlite:///backend/cratip.db
 
-# Backend
-BACKEND_HOST=127.0.0.1
-BACKEND_PORT=8000
-```
+  # Backend
+  BACKEND_HOST=127.0.0.1
+  BACKEND_PORT=8000
+  ```
 
 ---
 
-## 🎬 Quick Start
+## 🎬 Quick Start (make sure that your virtual environment is activated)
 
 ### Option 1: Using Separate Terminals
 
 **Terminal 1 - Backend:**
 ```bash
-cd backend
-uvicorn main:app --reload --host 0.0.0.0 --port 8000
+uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 **Terminal 2 - Dashboard:**
@@ -666,61 +722,6 @@ taskkill /PID <pid> /F
 
 ---
 
-## 📚 Project Structure
-
-```
-Cyber_Risk_Assessment_Platform/
-├── backend/
-│   ├── main.py                 # FastAPI application
-│   ├── database.py             # Database operations
-│   ├── alerts.py               # Alert generation
-│   ├── config.py               # Configuration
-│   ├── schemas.py              # Pydantic models
-│   ├── services/               # Business logic layers
-│   │   ├── layer1_service.py
-│   │   ├── layer2_service.py
-│   │   ├── layer3_service.py
-│   │   └── orchestrator.py
-│   └── reports/                # Report generators
-│       ├── csv_report.py
-│       ├── excel_report.py
-│       └── pdf_report.py
-├── dashboard/
-│   ├── app.py                  # Main dashboard app
-│   ├── data_loader.py          # API data loading
-│   ├── _pages/                 # Dashboard pages
-│   │   ├── overview.py
-│   │   ├── nmap.py
-│   │   ├── vulnerability.py
-│   │   ├── threat_summary.py
-│   │   ├── threat_intel.py
-│   │   ├── risk_analysis.py
-│   │   ├── alerts.py
-│   │   ├── ai_analyst.py
-│   │   └── reports.py
-│   └── utils/
-│       └── pdf_export.py
-├── layer1_scanning/
-│   ├── scanner.py              # Nmap wrapper
-│   ├── profiles.py             # Scan profiles
-│   └── utils.py
-├── layer2_threat_intel/
-│   ├── enricher.py             # Main enrichment logic
-│   └── clients/                # API clients
-│       ├── virustotal.py
-│       ├── shodan.py
-│       ├── vulners.py
-│       └── nvd.py
-├── layer3_risk_scoring/
-│   ├── scorer.py               # Risk calculation
-│   └── ai_reasoner.py          # AI analysis
-├── requirements.txt            # Python dependencies
-├── .env                        # Environment variables
-└── README.md                   # This file
-```
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please follow these guidelines:
@@ -746,7 +747,7 @@ This project is licensed under the MIT License.
 ---
 
 ## 🙏 Acknowledgments
-
+- Mr. Utkarsh Dixit, Mentor at Infosys
 - Nmap Development Team
 - FastAPI Framework
 - Streamlit Community
@@ -761,8 +762,7 @@ For issues and questions:
 - Contact the development team
 
 ---
-
-**Last Updated:** January 12, 2026  
+## Release
 **Version:** 1.0.0  
 **Status:** Production Ready ✅
 
@@ -776,28 +776,28 @@ Local: http://localhost:8502
 Network: http://192.168.1.6:8502
 Backend API (FastAPI):
 
-API Documentation: http://localhost:8000/docs
-Health Check: http://localhost:8000/health
-🚀 How to Use:
-Open the Dashboard → http://localhost:8502
-Configure Scan → Use left sidebar
-Enter target IPs or domains (e.g., scanme.nmap.org)
-Select scan profile (Quick/Normal/Intensive)
-Optional: Specify ports
-Start Scan → Click the "Start Scan" button
-Monitor Results → Navigate through tabs:
-🏠 Overview - Executive summary
-🛰️ Nmap - Scan details
-🚨 Alerts - Security notifications
-📊 Risk Analysis - Risk scores
-🧠 AI Analyst - GPT insights
-✨ All Features Active:
-✅ Automated vulnerability scanning
-✅ Threat intelligence (VirusTotal, Shodan, Vulners, NVD)
-✅ Risk scoring and classification
-✅ Real-time security alerts
-✅ Interactive dashboards with charts
-✅ PDF/Excel/CSV report exports
-
+API Documentation: http://localhost:8000/docs<br>
+Health Check: http://localhost:8000/health<br>
+🚀 How to Use:<br>
+Open the Dashboard → http://localhost:8502<br>
+Configure Scan → Use left sidebar<br>
+Enter target IPs or domains (e.g., scanme.nmap.org)<br>
+Select scan profile (Quick/Normal/Intensive)<br>
+Optional: Specify ports<br>
+Start Scan → Click the "Start Scan" button<br>
+Monitor Results → Navigate through tabs:<br>
+🏠 Overview - Executive summary<br>
+🛰️ Nmap - Scan details<br>
+🚨 Alerts - Security notifications<br>
+📊 Risk Analysis - Risk scores<br>
+🧠 AI Analyst - GPT insights<br>
+✨ All Features Active:<br>
+✅ Automated vulnerability scanning<br>
+✅ Threat intelligence (VirusTotal, Shodan, Vulners, NVD)<br>
+✅ Risk scoring and classification<br>
+✅ Real-time security alerts<br>
+✅ Interactive dashboards with charts<br>
+✅ PDF/Excel/CSV report exports<br>
+<br>
 Your Cyber Risk Assessment Platform is ready to scan! 🛡️
 
