@@ -49,7 +49,7 @@ ________________________________________________________________________________
 
 ```
 Directory structure:
-└── ksaikiran950-cyber_risk_assessment-threat_intelligence_platform__using_python/
+└── Cyber-Risk-Assessment-And-Threat-Intelligence-Platform-Using-Python/            
     ├── README.md
     ├── requirements.txt
     ├── backend/
@@ -231,8 +231,8 @@ ________________________________________________________________________________
 
 -- Step 1: Clone Repository
   ```bash
-  git clone ksaikiran950/Cyber_Risk_Assessment_Platform.git
-  cd Cyber_Risk_Assessment_Platform
+  git clone https://github.com/Ragul2345/Cyber-Risk-Assessment-And-Threat-Intelligence-Platform-Using-Python.git
+  cd Cyber-Risk-Assessment-And-Threat-Intelligence-Platform-Using-Python
   ```
 
 -- Step 2: Create Virtual Environment
