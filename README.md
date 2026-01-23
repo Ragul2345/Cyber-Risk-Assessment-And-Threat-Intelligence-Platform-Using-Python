@@ -1,4 +1,4 @@
--- 🛡️ Cyber Risk Assessment And Threat Intelligence Platform Using Python (CRATIP)
+# 🛡️ Cyber Risk Assessment And Threat Intelligence Platform Using Python (CRATIP)
 ![Last Commit](https://img.shields.io/github/last-commit/Ragul2345/Cyber-Risk-Assessment-And-Threat-Intelligence-Platform-Using-Python)
 
 ##   Automated Vulnerability Scanning, Threat Intelligence, and Risk Assessment System   ##
@@ -10,7 +10,7 @@
 ![SQLite](https://img.shields.io/badge/database-SQLite-pink)
 ![Tests](https://img.shields.io/badge/tests-passing-brightgreen)<br>
 
--- 📋 Table of Contents
+# 📋 Table of Contents
 
 - [Overview](#-overview)
 - [Features](#-features)
@@ -27,13 +27,13 @@
 - [Configuration](#configuration)
 - [Project Requirements Compliance](#-project-requirements-compliance)
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- 🎯 Overview
+# 🎯 Overview
 
 The Cyber Risk Assessment And Threat Intelligence Platform Using Python (CRATIP) is an enterprise-grade security assessment system that combines automated vulnerability scanning, threat intelligence enrichment, and AI-powered risk analysis to provide comprehensive security insights.
 
--- Key Capabilities
+## Key Capabilities
 
 ✅ Automated Vulnerability Scanning - Nmap-based network discovery and service detection  
 ✅ Threat Intelligence Integration - Real-time data from VirusTotal, Shodan, Vulners, and NVD  
@@ -43,9 +43,9 @@ The Cyber Risk Assessment And Threat Intelligence Platform Using Python (CRATIP)
 ✅ Audit-Ready Reports - PDF, Excel, and CSV export capabilities  
 ✅ AI Analyst - OpenAI-powered threat analysis and remediation recommendations
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- Repository Structure
+## Repository Structure
 
 ```
 Directory structure:
@@ -102,11 +102,11 @@ Directory structure:
     └── .devcontainer/
         └── devcontainer.json
 ```
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- 🚀 Features
+# 🚀 Features
 
-(1.) Multi-Layer Security Architecture
+## Multi-Layer Security Architecture
 
 **Layer 1: Network Scanning**
 - Automated Nmap scans with customizable profiles (Quick, Normal, Intensive)
@@ -126,9 +126,9 @@ ________________________________________________________________________________
 - Service-based risk calculations
 - Threat intel impact scoring
 
-(2.) Automated Alert System
+## Automated Alert System
 
--- Alert Types
+## Alert Types
 - 🔴 **Critical Risk Score** (≥80)
 - 🟠 **High Risk Score** (≥60)
 - 🟠 **Multiple Vulnerabilities** (≥5)
@@ -137,14 +137,14 @@ ________________________________________________________________________________
 - 🟠 **Shodan Vulnerabilities** (>5)
 - 🟡 **Unusual Port Activity** (>20 open ports)
 
--- Alert Features
+##  Alert Features
 - Real-time generation after each scan
 - Configurable thresholds
 - Dashboard integration with filtering
 - Historical tracking and analytics
 - CSV export capability
 
-(3.) Interactive Dashboard
+## Interactive Dashboard
 
 - **Overview**: Executive summary with KPIs
 - **Nmap Results**: Detailed service inventory
@@ -156,9 +156,9 @@ ________________________________________________________________________________
 - **AI Analyst**: GPT-powered security insights
 - **Reports**: Compliance-ready documentation
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- 🏗️ Architecture
+# 🏗️ Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -193,7 +193,7 @@ ________________________________________________________________________________
                             └───────────┘
 ```
 
--- Technology Stack
+## Technology Stack
 
 **Backend:**
 - FastAPI 0.115.0 - High-performance async API framework
@@ -215,11 +215,11 @@ ________________________________________________________________________________
 - XlsxWriter 3.2.0 - Excel reports
 - OpenPyXL 3.1.5 - Excel manipulation
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- 📦 Installation
+# 📦 Installation
 
--- Prerequisites
+## Prerequisites
 - Python 3.10 or higher
 - Nmap installed on system. ([Install nmap](./helper_docs/nmap_setup.md))
 - API keys (optional but recommended):
@@ -229,30 +229,30 @@ ________________________________________________________________________________
   - [NVD API key](./helper_docs/NVD_API_key.md)
   - [OpenRouter API key (for AI features)](./helper_docs/OpenRouter_API_key.md)
 
--- Step 1: Clone Repository
+## Step 1: Clone Repository
   ```bash
   git clone https://github.com/Ragul2345/Cyber-Risk-Assessment-And-Threat-Intelligence-Platform-Using-Python.git
   cd Cyber-Risk-Assessment-And-Threat-Intelligence-Platform-Using-Python
   ```
 
--- Step 2: Create Virtual Environment
+## Step 2: Create Virtual Environment
   ```bash
   python -m venv .venv
   ```
--- Step 3: Activate Virtual Environment
+## Step 3: Activate Virtual Environment
   ```bash
   .venv\Scripts\activate # windows
 
   source .venv/bin/activate # linux / Mac
   ```
--- Step 4: Install Dependencies
+## Step 4: Install Dependencies
   ```bash
   pip install --upgrade pip   # (optional: upgrade pip)
 
   pip install -r requirements.txt
   ```
 
--- Step 5: Configure Environment
+## Step 5: Configure Environment
 
 Create a `.env` file in the project root:
 
@@ -271,11 +271,11 @@ Create a `.env` file in the project root:
   BACKEND_HOST=127.0.0.1
   BACKEND_PORT=8000
   ```
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- 🎬 Quick Start (make sure that your virtual environment is activated)
+# 🎬 Quick Start (make sure that your virtual environment is activated)
 
--- Option 1: Using Separate Terminals
+### Option 1: Using Separate Terminals
 
 **Terminal 1 - Backend:**
 ```bash
@@ -297,17 +297,17 @@ Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd backend; uvico
 Start-Process powershell -ArgumentList "-NoExit", "-Command", "streamlit run dashboard/app.py"
 ```
 
--- Access the Application
+## Access the Application
 
 - **Dashboard**: http://localhost:8501
 - **API Documentation**: http://localhost:8000/docs
 - **Backend Health**: http://localhost:8000/health
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- 🧩 System Components
+# 🧩 System Components
 
--- Backend Services
+## Backend Services
 
 #### **Layer 1 Service** (`backend/services/layer1_service.py`)
 ```python
@@ -351,7 +351,7 @@ def run_layer3_scoring(layer2_result):
     """
 ```
 
--- Database Schema
+## Database Schema
 
 **Scans Table**
 ```sql
@@ -368,7 +368,7 @@ CREATE TABLE scans (
 );
 ```
 
--- **Alerts Table**
+**Alerts Table**
 ```sql
 CREATE TABLE alerts (
     id INTEGER PRIMARY KEY,
@@ -382,7 +382,7 @@ CREATE TABLE alerts (
 );
 ```
 
--- **Audit Logs Table**
+**Audit Logs Table**
 ```sql
 CREATE TABLE audit_logs (
     id INTEGER PRIMARY KEY,
@@ -392,11 +392,11 @@ CREATE TABLE audit_logs (
     details TEXT
 );
 ```
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- 🚨 Alert System
+# 🚨 Alert System
 
--- Configuration
+## Configuration
 
 Alert thresholds can be customized in `backend/alerts.py`:
 
@@ -410,7 +410,7 @@ ALERT_THRESHOLDS = {
 }
 ```
 
--- Alert Generation Flow
+## Alert Generation Flow
 
 ```
 Scan Completed
@@ -426,18 +426,18 @@ Create Alert in Database
 Display in Dashboard
 ```
 
--- Dashboard Features
+## Dashboard Features
 
 - **Alert Overview**: Total, Active, Critical, High, Acknowledged counts
 - **Filtering**: By severity, status, and type
 - **Visualization**: Severity distribution pie chart, timeline chart
 - **Export**: CSV download for all alerts
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- 🔄 Data Flow
+# 🔄 Data Flow
 
--- Complete Pipeline
+## Complete Pipeline
 
 ```
 1. User Initiates Scan (Dashboard)
@@ -467,7 +467,7 @@ ________________________________________________________________________________
 10. Display: Charts, Metrics, Tables, Alerts
 ```
 
--- Data Structures
+## Data Structures
 
 **Layer 1 Output:**
 ```json
@@ -529,11 +529,11 @@ ________________________________________________________________________________
   }
 }
 ```
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- 📡 API Documentation
+# 📡 API Documentation
 
--- Scan Endpoints
+## Scan Endpoints
 
 **POST /scan/start**
 Start a new vulnerability scan
@@ -568,7 +568,7 @@ Get current scan status
 }
 ```
 
--- Data Endpoints
+## Data Endpoints
 
 **GET /nmap/results**
 Get flattened scan results
@@ -595,7 +595,7 @@ Get aggregated risk summary
 }
 ```
 
--- Alert Endpoints
+## Alert Endpoints
 
 **GET /alerts**
 Get all alerts
@@ -617,11 +617,11 @@ Get alert statistics
   "acknowledged": 7
 }
 ```
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- 📊 Dashboard
+# 📊 Dashboard
 
--- Pages Overview
+## Pages Overview
 
 1. **🏠 Overview** - Executive summary with key metrics
 2. **🛰️ Nmap** - Detailed scan results table
@@ -633,7 +633,7 @@ ________________________________________________________________________________
 8. **🧠 AI Analyst** - GPT-powered insights
 9. **📜 Reports** - Export and compliance
 
--- Key Features
+## Key Features
 
 - **Real-time Updates**: Auto-refresh during scans
 - **Interactive Charts**: Plotly-based visualizations
@@ -641,17 +641,17 @@ ________________________________________________________________________________
 - **Export**: CSV, Excel, PDF report generation
 - **Dark/Light Theme**: User-selectable interface mode
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- ⚙️ Configuration
+# ⚙️ Configuration
 
--- Scan Profiles
+## Scan Profiles
 
 - **Quick**: Fast scan of top 100 ports
 - **Normal**: Standard scan with service detection
 - **Intensive**: Comprehensive scan with OS detection
 
--- API Rate Limits
+## API Rate Limits
 
 Configure in `.env`:
 ```env
@@ -659,7 +659,7 @@ VIRUSTOTAL_RATE_LIMIT=4
 SHODAN_RATE_LIMIT=1
 ```
 
--- Alert Customization
+## Alert Customization
 
 Modify thresholds in `backend/alerts.py`:
 ```python
@@ -669,11 +669,11 @@ ALERT_THRESHOLDS = {
     # Add custom thresholds
 }
 ```
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- ✅ Project Requirements Compliance
+# ✅ Project Requirements Compliance
 
--- Required Outcomes
+## Required Outcomes
 
 | Requirement | Status | Implementation |
 |------------|--------|----------------|
@@ -683,7 +683,7 @@ ________________________________________________________________________________
 | Alerts for high-risk vulnerabilities | ✅ Complete | Automated alert system with 7 types |
 | Audit-ready reports | ✅ Complete | PDF, Excel, CSV exports |
 
--- Additional Features
+## Additional Features
 
 - AI-powered threat analysis
 - Historical trend tracking
@@ -691,11 +691,11 @@ ________________________________________________________________________________
 - Configurable alert thresholds
 - Comprehensive audit logging
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- 🔧 Troubleshooting
+# 🔧 Troubleshooting
 
--- Common Issues
+## Common Issues
 
 **Backend not starting:**
 ```bash
@@ -719,9 +719,9 @@ taskkill /PID <pid> /F
 - Check key format (no quotes needed)
 - Restart backend after adding keys
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- 🤝 Contributing
+# 🤝 Contributing
 
 Contributions are welcome! Please follow these guidelines:
 
@@ -731,19 +731,19 @@ Contributions are welcome! Please follow these guidelines:
 4. Push to the branch
 5. Create a Pull Request
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
+---
 
--- 📄 License
+# 📄 License
 
 This project is licensed under the MIT License.
 
 
--- 👥 Authors
+# 👥 Authors
 
 **Development Team** - Infosys Final Project
 
 
--- 🙏 Acknowledgments
+# 🙏 Acknowledgments
 
 - Mr. Utkarsh Dixit, Mentor at Infosys
 - Nmap Development Team
@@ -751,18 +751,17 @@ This project is licensed under the MIT License.
 - Streamlit Community
 - Security Intelligence Providers (VirusTotal, Shodan, Vulners, NVD)
 
--- 📞 Support
+# 📞 Support
 
 For issues and questions:
 - Create an issue in the repository
 - Contact the development team
 
--- Release
+# Release
 **Version:** 1.0.0  
 **Status:** Production Ready ✅
 
-____________________________________________________________________________________________________________________________________________________________________________________________________________________
-
+---
 
 🎉 Project Successfully Running!
 🌐 Access URLs:
@@ -797,3 +796,4 @@ Monitor Results → Navigate through tabs:<br>
 <br>
 Your Cyber Risk Assessment Platform is ready to scan! 🛡️
 
+---
