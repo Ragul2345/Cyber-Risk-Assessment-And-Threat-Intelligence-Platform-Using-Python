@@ -1,7 +1,7 @@
 # 🛡️ Cyber Risk Assessment And Threat Intelligence Platform Using Python (CRATIP)
 ![Last Commit](https://img.shields.io/github/last-commit/Ragul2345/Cyber-Risk-Assessment-And-Threat-Intelligence-Platform-Using-Python)
 
-##   Automated Vulnerability Scanning, Threat Intelligence, and Risk Assessment System   ##
+##   Automated Vulnerability Scanning, Threat Intelligence and Risk Assessment System   ##
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-green.svg)](https://fastapi.tiangolo.com/)
